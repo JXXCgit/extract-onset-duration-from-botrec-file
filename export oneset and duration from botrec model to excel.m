@@ -1,6 +1,6 @@
 %%% this script is used to extracxt the onset and duration of the '....Model_Parameter' file for GLM analysis
 clear all;
-load('\\home.ansatt.ntnu.no\xiuxianc\Desktop\New folder\fig_UDKmodelCreate001.mat')
+load('\\home\xiuxian\Desktop\New folder\fig_UDKmodelCreate001.mat')
 %%%run1
 %%%moving
 dmo=array2table(Model.sess{1, 1}.ons{1, 1}) %onset
