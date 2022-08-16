@@ -9,7 +9,7 @@ cd(Maindir)
         load('orientation.mat')
         A=orientation(:, [6:9, 11]);            
         A=table2array(A)
-        for i = 1: (max(A(:, 4)/305))
+        for i = 1: round(max(A(:, 4)/305))
             eval(['orientation_r',num2str(i), ' = A((A(:, 4)>305*(i-1) & A(:, 4)<= 305*i), :);']);  
 %             d=array2table(eval(['orientation_r', num2str(i)]))
 % d.Properties.VariableNames{1} = 'theta';d.Properties.VariableNames{2} = 'sin6theta';d.Properties.VariableNames{3} = 'cosin6theta'; d.Properties.VariableNames{4} = 'timeTR';d.Properties.VariableNames{5} = 'durationTR';
