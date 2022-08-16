@@ -4,7 +4,7 @@ sublist = dir(fullfile(Maindir, 'sub*'))
 filelist = dir(fullfile(Maindir, '**\*orientation.mat*'))
 cd(Maindir)
  for k=1:numel(filelist.name) 
-        currD=timinglist(k).folder
+        currD=filelist(k).folder
         cd(currD)
         load('orientation.mat')
         A=orientation(:, [6:9, 11]);            
